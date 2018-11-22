@@ -1,0 +1,24 @@
+{% extends 'Base.html' %}
+<html>
+<head>
+    {% block title %}Tech Team{% endblock %}
+    <meta charset="utf-8">
+</head>
+
+{% block body %}
+    <h1>Welcome To The Evo Tech Team Employee List</h1>
+
+        {% for worker in workers_list %}
+        <li>{{ worker }}</li>
+        {% endfor %}
+    <h2>Members of the team:</h2>
+        <ul>
+            {% for name, age in workers_dict.items() %}
+                <li>{{ name|capitalize }} is {{ age }} years old</li>
+            {% endfor%}
+        </ul>
+
+        <img src="/static/OvoEnergy.png" alt="Ovo">
+
+{% endblock %}
+</html>
